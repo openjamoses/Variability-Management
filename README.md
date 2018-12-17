@@ -37,6 +37,8 @@ Data Mining Scripts
 
 •	Count_Atleast_6Commits.java - Eliminates all the repos with less than six (6) commits on GitHub
 
+•	Identify_MergedCom.java - Collets merged commits between mainline and fork variants
+
 •	CollectMLP_FPPullrequestCommits.java – Collects the merged commits of the pull requests sent from the mainline to the fork variant or fork variant to mainline variant.
 
 •	Collect_AppLanguage.java – Collects Apps the programming languages.
@@ -44,6 +46,10 @@ Data Mining Scripts
 •	Collect_GooglePlayStatistics.java - Collects Apps Google Play meta-data
 
 •	IdentifyForks_UniqueCommits.java : Collects unique commits for the fork variants
+
+•	Count_ActiveFP.java -  Collects active forks
+
+•	 MLP_FPMerge_Dev.java - Collects common and unique developers between mainline and fork variant
 
 
 
