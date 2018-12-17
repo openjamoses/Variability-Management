@@ -1,4 +1,9 @@
-Code and data for our study "Clone-Based Variability Management in the Android Ecosystem" presented the 34th IEEE International Conference on Software Maintenance and Evolution (ICSME), 2018.
+Code and data for our study 
+
+
+Conference
+
+The 34th IEEE International Conference on Software Maintenance and Evolution (ICSME), 2018.
 
 
 Clone-Based Variability Management in the Android Ecosystem
