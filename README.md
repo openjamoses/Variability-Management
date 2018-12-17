@@ -1,50 +1,31 @@
-We identified and analyzed families of apps (Comprising of the main projects and its forks) that are maintained together and that exist both on the official app store (Google Play) as well as on Github to explores clone-based reuse practices for open- source Android apps: Publication Clone-Based Variability Management in the Android Ecosystem
-This project uses GitHub Rest API to mine Project Details from Github Social Coding platform. 
-To be able to Mine as many data using GitHub Rest API within a short period, You might need to generate many tokens, to avoid rate limit problem:
+Code and data for our study "Clone-Based Variability Management in the Android Ecosystem" presented the 34th IEEE International Conference on Software Maintenance and Evolution (ICSME), 2018.
 
--	Search_for_Repos.java
-The criteria below return the first 100 repos with at least 2 forks and are not fork example to search for repos with atleast 2 forks:
-https://api.github.com/search/repositories?q=android%20app+forks:>=2+fork:false&sort=forks&order=asc&page=1per_page=100.  
 
--	FindMLP_GooglePlayApps.java – find out if the repos package name is on Google play. This Java file first identify the package name by reading the manifest file and use the package name to identify if it corresponds to the app on Google[play..
+Clone-Based Variability Management in the Android Ecosystem
 
-https://api.github.com/search/code?q=main+in:path+package+in:file+filename:AndroidManifest+repo:ProjectName>+extension:xml&page.
+Abstract
+Mobile app developers often need to create variants to account for different customer segments, payment models or functionalities. A common strategy is to clone (or fork) an existing app and then adapt it to new requirements. This form of reuse has been enhanced with the advent of social-coding platforms such as GitHub, cultivating a more systematic reuse. Different facilities, such as forks, pull requests, and cross-project traceability support clone-based development. Unfortunately, even though, many apps are known to be maintained in many variants, little is known about how practitioners manage variants of mobile apps.
+We present a study that explores clone-based reuse practices for open-source Android apps. We identified and analyzed families of apps that are maintained together and that exist both on the official app store (Google Play) as well as on GitHub, allowing us to analyze reuse practices in depth. We mined both repositories to identify app families and to study their characteristics, including their variabilities as well as code-propagation practices and maintainer relationships. We found that, indeed, app families exist and that forked app variants fall into the following categories: (i) re-branding and simple customizations, (ii) feature extension, (iii) supporting of the mainline app, and (iv) implementation of different, but related features. Other notable characteristic of the app families we discovered include: (i) 73% of the app families did not perform any form of code propagation, and (ii) 74% of the app families we studied do not have common maintainers.
 
-Note that: Android Manifest file is XML Format, and therefore we Used DOM to parse the file as bellow.
-Document doc = null;
-        try{
-        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-        InputStream inputStream = new    ByteArrayInputStream(xmlString.getBytes());
-        doc =  dBuilder.parse(inputStream);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return doc; 
+Requirements
+	• poi-3.14.jar or higher
+	• poi-ooxml-3.14.jar or higher
+	• poi-ooxml-schemas-3.14.jar or higher
+	• xmlbeans-2.6.0.jar or higher
+	• json-simple-1.1.1.jar or higher
+	• jsoup-1.11.3.jar or higher
 
--	Count_Atleast_6Commits.java , To eliminate all the repos with less than six (6) commits
-By reading just the first page of the commits using the Github API, https://api.github.com/repos/<ProjectName>/commits
-By just counting the size of the JSONARRAY Returned from the above URL We can know the total commits .
+Data Mining Scripts
+•	Search_for_Repos.java – searching repositories on GitHub
+•	FindMLP_GooglePlayApps.java – Checks if the mainline variants exists on Google Play store
+•	Count_Atleast_6Commits.java - Eliminates all the repos with less than six (6) commits on GitHub
+•	CollectMLP_FPPullrequestCommits.java – Collects the merged commits of the pull requests sent from the mainline to the fork variant or fork variant to mainline variant.
+•	Collect_AppLanguage.java – Collects Apps the programming languages.
+•	Collect_GooglePlayStatistics.java - Collects Apps Google Play meta-data
+•	IdentifyForks_UniqueCommits.java : Collects unique commits for the fork variants
 
--	CollectMLP_FPPullrequestCommits.java To collect the pull request commits and the hanged lines of code, between Main line Projects and Its forks. 
-https://api.github.com/repos/<ProjectName>/pulls/<Number>/commits
-The all implementation is done inside the file: com.opm.variability.reads.PullrequestCommits.java
+Data Analysis Scripts
 
--	Collect_AppLanguage.java This file returns all the programming languages used on a given Repos name by reading the JSon Object returns from the REST API .
-
-String language = (String) jSONObject.get("language");
-
--	https://api.github.com/repos/<ProjectName>.
-
--	Collect_GooglePlayStatistics.java, This file uses JSOUP to Parse the Google play html Pages corresponding to the Repos name: and return app details such as Number of downloads, Starts, Update date, Authors, Category, etc. as shown below:
-
-To parse html page using JSOUP, code bellow is used::
-Connection.Response res = Jsoup.connect("https://play.google.com/store/apps/details?id=<PackageName>hl=en).get()")
-                                .method(Connection.Method.GET)
-                                .execute();
-              Document doc= res.parse();
-
-- IdentifyForks_UniqueCommits.java : To identify the unique commits for the fork projects; 
 
 
 
