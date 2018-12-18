@@ -33,7 +33,9 @@ Data Mining Scripts
 
 •	Search_for_Repos.java – searching repositories on GitHub
 
-•	FindMLP_GooglePlayApps.java – Checks if the mainline variants exists on Google Play store
+•	FindMLP_GooglePlayApps.java – Collects all the mainline variants on Google Play store
+
+•	FindForks_GooglePlayApps.java - Collects all the forks variants on Google Play store
 
 •	Count_Atleast_6Commits.java - Eliminates all the repos with less than six (6) commits on GitHub
 
