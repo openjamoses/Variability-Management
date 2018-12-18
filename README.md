@@ -62,19 +62,12 @@ Bibtex
 ======
 
 @inproceedings{Businge:2018-ICSME,
-
            author = {Businge, John and Openja, Moses and Nadi, Sarah and Bainomugisha, Engineer and Berger, Thorsten},
-
            title = {Clone-based Variability Management in the Android Ecosystem},
-
            booktitle = {Proceedings of the 34th International Conference on Software Maintenance and Evolution},
-
            series = {ICSME},
-
            year = {2018},
-
            location = {Madrid, Spain},
-
            numpages = {10},
 }
 
