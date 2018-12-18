@@ -51,6 +51,11 @@ Data Mining Scripts
 
 •	Pullrequest_DevelopersDirection_Final.java - Collects pull requests and direction of the pull request propagation (i.e., from mainline to fork or from fork to mainline or from fork to another fork)
 
+
+Manuscript -  Variant_Management-ICSME-2018.pdf
+
+Presentation Slided -  ICSME-2018 Presentation.pptx
+
 Bibtex
 
 ======
