@@ -37,7 +37,7 @@ Data Mining Scripts
 
 •	FindForks_GooglePlayApps.java - Collects all the forks variants on Google Play store
 
-•	Count_Atleast_6Commits.java - Eliminates all the repos with less than six (6) commits on GitHub
+•	EliminateRepos_Less6Commits.java - Eliminates all the repos with less than six (6) commits on GitHub
 
 •	Identify_MergedCom.java - Collets merged commits between mainline and fork variants
 
