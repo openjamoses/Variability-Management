@@ -39,6 +39,8 @@ Data Mining Scripts
 
 •	EliminateRepos_Less6Commits.java - Eliminates all the repos with less than six (6) commits on GitHub
 
+•	EliminateRepos_Less6Commits.java - Eliminates all the repos with less than six (6) commits on GitHub
+
 •	Identify_MergedCom.java - Collets merged commits between mainline and fork variants
 
 •	CollectMLP_FPPullrequestCommits.java – Collects the merged commits of the pull requests sent from the mainline to the fork variant or fork variant to mainline variant.
