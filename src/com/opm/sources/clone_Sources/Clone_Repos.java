@@ -55,7 +55,7 @@ public class Clone_Repos {
      * 
      * @param project - the reponame e.g., bitcoin-wallet/bitcoin-wallet
      * @param downloads_path where the clone will be saved on your PC
-     * @return 
+     * @return message to showing either download success or failure
      */
     public static String downloads(String project, String downloads_path) {
         String file_name = downloads_path + project.split("/")[0] + "_" + project.split("/")[1] + ".zip";
