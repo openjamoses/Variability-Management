@@ -7,13 +7,13 @@ The 34th IEEE International Conference on Software Maintenance and Evolution (IC
 
 Clone-Based Variability Management in the Android Ecosystem
 
-Abstract
+## Abstract
 
 Mobile app developers often need to create variants to account for different customer segments, payment models or functionalities. A common strategy is to clone (or fork) an existing app and then adapt it to new requirements. This form of reuse has been enhanced with the advent of social-coding platforms such as GitHub, cultivating a more systematic reuse. Different facilities, such as forks, pull requests, and cross-project traceability support clone-based development. Unfortunately, even though, many apps are known to be maintained in many variants, little is known about how practitioners manage variants of mobile apps. We present a study that explores clone-based reuse practices for open-source Android apps. We identified and analyzed families of apps that are maintained together and that exist both on the official app store (Google Play) as well as on GitHub, allowing us to analyze reuse practices in depth. We mined both repositories to identify app families and to study their characteristics, including their variabilities as well as code-propagation practices and maintainer relationships. We found that, indeed, app families exist and that forked app variants fall into the following categories: (i) re-branding and simple customizations, (ii) feature extension, (iii) supporting of the mainline app, and (iv) implementation of different, but related features. Other notable characteristic of the app families we discovered include: (i) 73% of the app families did not perform any form of code propagation, and (ii) 74% of the app families we studied do not have common maintainers.
 
 ========================================================
 
-Requirements
+## Requirements
 
 • poi-3.14.jar or higher
 
@@ -29,7 +29,7 @@ Requirements
 
 ==========================================================
 
-Data Mining Scripts
+## Data Mining Scripts
 
 •	Search_for_Repos.java – searching repositories on GitHub
 
@@ -59,9 +59,9 @@ Data Mining Scripts
 
 =============================================================================================================
 
-Manuscript -  Variant_Management-ICSME-2018.pdf
+### Manuscript -  Variant_Management-ICSME-2018.pdf
 
-Presentation Slided -  ICSME-2018 Presentation.pptx
+### Presentation Slided -  ICSME-2018 Presentation.pptx
 
 =============================================================================================================
 
