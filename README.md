@@ -65,7 +65,7 @@ Mobile app developers often need to create variants to account for different cus
 
 =============================================================================================================
 
-#### Please cite our work  - Bibtex
+### Please cite our work  - Bibtex
 
 @inproceedings{Businge:2018-ICSME,
 
